@@ -1,1 +1,0 @@
-# bhi25_diffusiondemo
