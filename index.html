@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VC Demo Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>DDDM-VC: Decoupled Denoising Diffusion Models with Disentangled Representation and Prior Mixup for Verified Robust Voice Conversion</h1>
+    <img src="assets/architecture.png" alt="DDDM-VC Architecture">
+  </header>
+
+  <section>
+    <h2>Seen-Speaker Scenario</h2>
+    <p>Speakers that have been seen during training.</p>
+    <table>
+      <tr>
+        <th>Source Speaker<br><small>(Male)</small></th>
+        <th>Target Speaker<br><small>(Female)</small></th>
+        <th colspan="4">Converted Speech (Proposed)</th>
+      </tr>
+      <tr>
+        <td><audio controls src="audio/source1.wav"></audio></td>
+        <td><audio controls src="audio/target1.wav"></audio></td>
+        <td class="sub-cols">
+          <div>Small w/ L<sub>dep</sub><br><audio controls src="audio/prop1_s_dep.wav"></audio></div>
+          <div>Small w/o L<sub>dep</sub><br><audio controls src="audio/prop1_s_nodep.wav"></audio></div>
+          <div>Large w/ L<sub>dep</sub><br><audio controls src="audio/prop1_l_dep.wav"></audio></div>
+          <div>Large w/o L<sub>dep</sub><br><audio controls src="audio/prop1_l_nodep.wav"></audio></div>
+        </td>
+      </tr>
+      <!-- Repeat above row 3 more times -->
+    </table>
+  </section>
+
+  <section>
+    <h2>Zero-Shot Scenario</h2>
+    <p>Speakers that were not seen during training.</p>
+    <table>
+      <tr>
+        <th>Source Speaker<br><small>(Male)</small></th>
+        <th>Target Speaker<br><small>(Female)</small></th>
+        <th>Vevo-Voice<br><small>(Baseline 1)</small></th>
+        <th>QuickVC<br><small>(Baseline 2)</small></th>
+        <th colspan="4">Converted Speech (Proposed)</th>
+      </tr>
+      <tr>
+        <td><audio controls src="audio/sourcez1.wav"></audio></td>
+        <td><audio controls src="audio/targetz1.wav"></audio></td>
+        <td><audio controls src="audio/vevoz1.wav"></audio></td>
+        <td><audio controls src="audio/quickz1.wav"></audio></td>
+        <td class="sub-cols">
+          <div>Small w/ L<sub>dep</sub><br><audio controls src="audio/zprop1_s_dep.wav"></audio></div>
+          <div>Small w/o L<sub>dep</sub><br><audio controls src="audio/zprop1_s_nodep.wav"></audio></div>
+          <div>Large w/ L<sub>dep</sub><br><audio controls src="audio/zprop1_l_dep.wav"></audio></div>
+          <div>Large w/o L<sub>dep</sub><br><audio controls src="audio/zprop1_l_nodep.wav"></audio></div>
+        </td>
+      </tr>
+      <!-- Repeat above row 3 more times -->
+    </table>
+  </section>
+</body>
+</html>
