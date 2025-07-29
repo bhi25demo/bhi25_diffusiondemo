@@ -60,3 +60,11 @@ th {
 .center-text {
   text-align: center;
 }
+
+.demo-img {
+  max-width: 70%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
